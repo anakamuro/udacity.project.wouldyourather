@@ -27,9 +27,13 @@ class Home extends Component {
     const { showAnswered } = this.state;
     const { users } = this.props;
     if (!users) return null;
+    
+    const questionDesc = (a, b) => b.timestamp - a.timestamp
 
     const answeredArr = Object.values(answered);
     const uansweredArr = Object.values(unanswered);
+    answeredArr.sort(questionDesc);
+    uansweredArr.sort(questionDesc);
 
     const shownQuestions = showAnswered ? answeredArr : uansweredArr;
 
@@ -43,6 +47,7 @@ class Home extends Component {
 
         {shownQuestions.map((question, index) => (
           <Question
+            key={question.id}
             question={question}
             users={users}
             history={history}
@@ -96,3 +101,4 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Home);
+
