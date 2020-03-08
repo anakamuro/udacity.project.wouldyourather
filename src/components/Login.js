@@ -25,7 +25,7 @@ class Login extends Component {
         <h3>Login</h3>
         <ul>
           {usersArray.map(user => (
-            <div>
+            <div key={user.id}>
               <li>{user.name}</li>
               <li>{user.id}</li>
               <img
@@ -44,17 +44,10 @@ class Login extends Component {
   }
 }
 
-// Disptach actions: runs reducer, which modifies state
-// SET: STORE
-// const mapDispatchToProps = { setAuthedUser };
 
-// Data from Store state
-// GET: FROM STORE
 const mapStateToProps = state => {
-  /*const questions = this.props;*/
-  return {
+ return {
     users: state.users
-    /* questions: state.questions*/
   };
 };
 
