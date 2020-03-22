@@ -1,9 +1,9 @@
       ** Would You Rather...? Project **
  
  
- - I installed all project dependencies with npm install and started the dependencies with npm start.
- + That is a project of would you rather? app. The user can make questions and make a vote which answer is. 
- + The leaderboard shows user from highest total points and lowest total points. 
- + The total points consists of the number of questions which were made and the number of answers which one made. 
- + The user can log in and log out. 
- + It shows a 404 page if the poll does not exist.
+ -I installed all project dependencies with npm install and started the dependencies with npm start.
+ +That is a project of would you rather? app. The user can make questions and make a vote which answer is. 
+ +The leaderboard shows user from highest total points and lowest total points. 
+ +The total points consists of the number of questions which were made and the number of answers which one made. 
+ +The user can log in and log out. 
+ +It shows a 404 page if the poll does not exist.
